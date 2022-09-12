@@ -1,3 +1,17 @@
+`git clone git@github.com:luetkemj/vim.git ~/.vim`
+
+create a .vimrc that points to the actual .vimrc file in the .vim directory
+
+`touch ~/.vimrc`
+
+.vimrc contents:
+
+`source ~/.vim/.vimrc`
+
+install plugins with Plug
+
+`:PlugInstall`
+
 ```
                     .                    
     ##############..... ##############   
@@ -19,17 +33,3 @@
                   .....                  
                     .         
 ```
-
-`git clone git@github.com:luetkemj/vim.git ~/.vim`
-
-create a .vimrc that points to the actual .vimrc file in the .vim directory
-
-`touch ~/.vimrc`
-
-.vimrc contents:
-
-`source ~/.vim/.vimrc`
-
-install plugins with Plug
-
-`:PlugInstall`
