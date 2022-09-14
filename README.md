@@ -33,3 +33,9 @@ install plugins with Plug
                   .....                  
                     .         
 ```
+
+## Todos:
+
+- [ ] auto format
+- [ ] code completion
+- [ ] go to definition
