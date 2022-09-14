@@ -71,14 +71,20 @@ set noshowmode
 " Exit Vim if NERDTree is the only window remaining in the only tab.
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 
-
-" Move to beginning/end of line without taking my fingers off of home row:
-nnoremap H ^
-nnoremap L $
-
 " Rg with preview window
 " https://github.com/junegunn/fzf.vim#example-rg-command-with-preview-window
 command! -bang -nargs=* Rg
   \ call fzf#vim#grep(
   \   'rg --column --line-number --no-heading --color=always --smart-case -- '.shellescape(<q-args>), 1,
   \   fzf#vim#with_preview(), <bang>0)
+
+" Move to beginning/end of line without taking my fingers off of home row:
+nnoremap H ^
+nnoremap L $
+
+" fzf and ripgrep keymaps
+nnoremap <C-p> :Files<CR>
+nnoremap <C-o> :Buffers<CR>
+nnoremap <C-g> :GFiles<CR>
+nnoremap <C-f> :Rg 
+
