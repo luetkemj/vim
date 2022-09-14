@@ -24,6 +24,10 @@ set hlsearch
 
 set tw=79
 
+" this centers the cursor on screen when possible
+set scrolloff=999
+
+let g:fzf_layout = { 'down': '40%' }
 call plug#begin()
 " The default plugin directory will be as follows:
 "   - Vim (Linux/macOS): '~/.vim/plugged'
@@ -47,6 +51,9 @@ Plug 'itchyny/lightline.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tpope/vim-fugitive'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+
 call plug#end()
 
 let g:gruvbox_contrast_dark= 'hard'
@@ -68,3 +75,10 @@ autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTr
 " Move to beginning/end of line without taking my fingers off of home row:
 nnoremap H ^
 nnoremap L $
+
+" Rg with preview window
+" https://github.com/junegunn/fzf.vim#example-rg-command-with-preview-window
+command! -bang -nargs=* Rg
+  \ call fzf#vim#grep(
+  \   'rg --column --line-number --no-heading --color=always --smart-case -- '.shellescape(<q-args>), 1,
+  \   fzf#vim#with_preview(), <bang>0)
