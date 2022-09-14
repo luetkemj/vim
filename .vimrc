@@ -27,6 +27,9 @@ set tw=79
 " this centers the cursor on screen when possible
 set scrolloff=999
 
+" add vertical line at col
+set colorcolumn=81
+
 let g:fzf_layout = { 'down': '40%' }
 call plug#begin()
 " The default plugin directory will be as follows:
