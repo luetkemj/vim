@@ -39,3 +39,4 @@ install plugins with Plug
 - [ ] auto format
 - [ ] code completion
 - [ ] go to definition
+- [ ] add https://github.com/tpope/vim-surround
