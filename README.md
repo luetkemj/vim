@@ -37,6 +37,8 @@ install plugins with Plug
 ## Todos:
 
 - [ ] auto format
-- [ ] code completion
 - [ ] go to definition
 - [ ] add https://github.com/tpope/vim-surround
+- [ ] investigate https://github.com/preservim/nerdcommenter
+- [ ] https://github.com/mattn/emmet-vim
+- [ ] https://github.com/ycm-core/YouCompleteMe
