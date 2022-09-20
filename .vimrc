@@ -22,7 +22,7 @@ set relativenumber
 " highlight search results
 set hlsearch
 
-set tw=79
+set tw=80
 
 " this centers the cursor on screen when possible
 set scrolloff=999
